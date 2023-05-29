@@ -13,14 +13,14 @@ export function SignInButton() {
 
   if (status === "authenticated") {
     return (
-      <div className="flex items-center justify-center gap-2">
+      <div className="flex items-center justify-center gap-4">
         <Link href={"/dashboard"}>
           <Image
             src={session.user?.image ?? "favicon.io"}
             alt="joseph"
             width={40}
             height={40}
-            className="rounded-ful"
+            className="rounded-full"
           ></Image>
         </Link>
         <button onClick={() => signOut()}>Sign Out</button>

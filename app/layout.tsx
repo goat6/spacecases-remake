@@ -1,4 +1,5 @@
 import AuthProvider from "./AuthProvider";
+import Footer from "./Footer";
 import NavMenu from "./NavMenu";
 import "./globals.css";
 
@@ -18,6 +19,7 @@ export default function RootLayout({
         <body>
           <NavMenu />
           {children}
+          <Footer />
         </body>
       </html>
     </AuthProvider>

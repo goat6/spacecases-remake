@@ -17,7 +17,7 @@ const Footer = () => {
         href={"https://github.com/goat6"}
         className="flex justify-center items-center gap-1 mr-6"
       >
-        <AiFillGithub size={35} color="white" />
+        <AiFillGithub size={35} color="white" />© goat6
       </Link>
     </footer>
   );
