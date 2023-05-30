@@ -1,4 +1,4 @@
-import NextAuth from "next-auth/next";
+import NextAuth from "next-auth";
 import type { NextAuthOptions } from "next-auth";
 import DiscordProvider from "next-auth/providers/discord";
 
