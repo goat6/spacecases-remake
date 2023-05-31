@@ -8,7 +8,7 @@ import SearchBar from "./components/SearchBar";
 
 const NavMenu = () => {
   return (
-    <nav className="w-full h-16 bg-gray-900 flex  items-center text-white capitalize font-bold">
+    <nav className="w-full h-20 bg-gray-900 flex  items-center text-white capitalize font-bold border-b-2 border-purple-400">
       <Link
         href={"/"}
         className="flex items-center justify-center mx-6 gap-2 flex-shrink-0"

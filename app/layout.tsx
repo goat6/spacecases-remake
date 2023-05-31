@@ -15,8 +15,8 @@ export default function RootLayout({
 }) {
   return (
     <AuthProvider>
-      <html lang="en">
-        <body>
+      <html className="h-full w-full" lang="en">
+        <body className="h-full w-full bg-gray-900">
           <NavMenu />
           {children}
           <Footer />
