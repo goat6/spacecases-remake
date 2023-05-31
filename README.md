@@ -34,5 +34,5 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## Thanks to:
-[@spacerulerwill] for the original spacecases project
-[@devjiwonchoi] for the help on deployment to vercel
+- [@spacerulerwill](https://github.com/Spacerulerwill) for the original spacecases project.
+- [@devjiwonchoi](https://github.com/devjiwonchoi) for the help on deployment to vercel.
