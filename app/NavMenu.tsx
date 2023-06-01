@@ -3,7 +3,6 @@ import React from "react";
 import { LuOrbit } from "react-icons/lu";
 import { BiCrown } from "react-icons/bi";
 import { SignInButton } from "./components/buttons";
-import AuthProvider from "./AuthProvider";
 import SearchBar from "./components/SearchBar";
 
 const NavMenu = () => {
