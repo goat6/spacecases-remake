@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^13.4.4",
     "autoprefixer": "10.4.14",
     "discord": "^0.8.2",
     "next": "^13.4.4",
