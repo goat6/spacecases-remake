@@ -13,7 +13,7 @@ export function SignInButton() {
 
   if (status === "authenticated") {
     return (
-      <div className="flex items-center justify-center gap-4">
+      <div className="flex items-center justify-center sm:gap-4">
         <Link href={"/dashboard"}>
           <Image
             src={session.user?.image ?? "favicon.io"}
