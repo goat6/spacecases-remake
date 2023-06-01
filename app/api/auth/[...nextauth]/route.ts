@@ -1,6 +1,7 @@
 import NextAuth from "next-auth";
 import { NextAuthOptions } from "next-auth";
 import DiscordProvider from "next-auth/providers/discord";
+import { redirect } from "next/dist/server/api-utils";
 
 const authOptions:NextAuthOptions = {
   providers: [

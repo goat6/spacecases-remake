@@ -28,5 +28,5 @@ export function SignInButton() {
     );
   }
 
-  return <button onClick={() => signIn()}>Sign In</button>;
+  return <button onClick={() => signIn("discord")}>Sign In</button>;
 }
