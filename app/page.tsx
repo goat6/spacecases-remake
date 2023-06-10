@@ -1,9 +1,12 @@
+import { signOut } from "next-auth/react";
+import Link from "next/link";
+import { useContext, useState } from "react";
 import { BsDiscord } from "react-icons/bs";
 
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col justify-center items-center bg-gray-900 font-bold py-16 gap-12">
+      <main className="h-[90svh] flex flex-col justify-center items-center bg-gray-900 font-bold py-16 gap-12">
         <h1 className="text-7xl text-purple-400 w-2/3">
           The premier case unboxing simulator.
         </h1>
@@ -22,6 +25,16 @@ export default function Home() {
             Add to discord
           </a>
         </button>
+        {
+          // () ? (
+          //   <ul className="top-full absolute w-max flex flex-col text-2xl h-full bg-white rounded-md text-black text-left p-2">
+          //     <Link href={"/profile/"}>Profile</Link>
+          //     <button onClick={() => signOut()} className="text-left">
+          //       Sign Out
+          //     </button>
+          //   </ul>
+          // ) : null)
+        }
       </main>
     </>
   );
