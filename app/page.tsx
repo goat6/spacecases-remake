@@ -25,16 +25,6 @@ export default function Home() {
             Add to discord
           </a>
         </button>
-        {
-          // () ? (
-          //   <ul className="top-full absolute w-max flex flex-col text-2xl h-full bg-white rounded-md text-black text-left p-2">
-          //     <Link href={"/profile/"}>Profile</Link>
-          //     <button onClick={() => signOut()} className="text-left">
-          //       Sign Out
-          //     </button>
-          //   </ul>
-          // ) : null)
-        }
       </main>
     </>
   );

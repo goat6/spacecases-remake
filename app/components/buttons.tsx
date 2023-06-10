@@ -3,19 +3,25 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { AiOutlineLoading } from "react-icons/ai";
 import { BiLogIn } from "react-icons/bi";
 
 export function SignInButton() {
+  const [dropdownVisibility, setDropdownVisiblity] = useState(false);
+
   const { data: session, status } = useSession();
 
   if (status === "loading") {
-    return <>...</>;
+    return (
+      <AiOutlineLoading className="animate-spin" color="white " size={50} />
+    );
   }
 
   if (status === "authenticated") {
     return (
-      <div className="flex items-center justify-center sm:gap-4">
-        <button onClick={() => console.log("bruh")}>
+      <div className="flex items-center justify-center sm:gap-4 relative">
+        <button onClick={() => setDropdownVisiblity(!dropdownVisibility)}>
           <Image
             src={session.user?.image ?? "favicon.io"}
             alt="joseph"
@@ -24,6 +30,16 @@ export function SignInButton() {
             className="rounded-full"
           ></Image>
         </button>
+        {dropdownVisibility ? (
+          <ul className="right-0 mt-2 top-full absolute w-max flex flex-col text-2xl h-max bg-white rounded-sm text-gray-800 text-left p-4 gap-2">
+            <p>{session.user?.name}</p>
+            <p className="text-gray-500 text-lg">{session.user?.email}</p>
+            <Link href={"/profile/"}>Profile</Link>
+            <button onClick={() => signOut()} className="text-left">
+              Sign Out
+            </button>
+          </ul>
+        ) : null}
       </div>
     );
   }
