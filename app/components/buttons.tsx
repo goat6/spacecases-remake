@@ -20,7 +20,7 @@ export function SignInButton() {
 
   if (status === "authenticated") {
     return (
-      <div className="flex items-center justify-center sm:gap-4 relative">
+      <div className="flex items-center justify-center sm:gap-4 relative z-0">
         <button onClick={() => setDropdownVisiblity(!dropdownVisibility)}>
           <Image
             src={session.user?.image ?? "favicon.io"}
@@ -31,7 +31,7 @@ export function SignInButton() {
           ></Image>
         </button>
         {dropdownVisibility ? (
-          <ul className="right-0 mt-2 top-full absolute w-max flex flex-col text-2xl h-max bg-white rounded-sm text-gray-800 text-left p-4 gap-2">
+          <ul className="right-0 mt-2 top-full absolute w-max flex flex-col text-2xl h-max bg-white rounded-sm text-gray-800 text-left p-4 gap-2 z-0">
             <p>{session.user?.name}</p>
             <p className="text-gray-500 text-lg">{session.user?.email}</p>
             <Link href={"/profile/"}>Profile</Link>

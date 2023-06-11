@@ -5,3 +5,8 @@
 .text-gold {
   color: gold;
 }
+
+/* Disable scroll for the whole page */
+.disable-scroll {
+  @apply overflow-hidden;
+}

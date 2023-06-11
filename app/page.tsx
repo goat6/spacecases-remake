@@ -1,6 +1,3 @@
-import { signOut } from "next-auth/react";
-import Link from "next/link";
-import { useContext, useState } from "react";
 import { BsDiscord } from "react-icons/bs";
 
 export default function Home() {
