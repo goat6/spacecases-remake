@@ -5,7 +5,9 @@ import { AiOutlineSearch } from "react-icons/ai";
 
 const SearchBar = () => {
   const [visibility, setVisibility] = useState(false);
-  const bodyElement = useRef(document.body);
+  const bodyElement = useRef(
+    typeof window !== "undefined" ? document.body : null
+  );
 
   const preventScroll = (e: Event) => {
     e.preventDefault();
@@ -14,17 +16,16 @@ const SearchBar = () => {
 
   useEffect(() => {
     if (visibility) {
-      bodyElement.current.classList.add("disable-scroll");
+      bodyElement.current!.classList.add("disable-scroll");
       window.addEventListener("wheel", preventScroll);
     } else {
-      bodyElement.current.classList.remove("disable-scroll");
+      bodyElement.current!.classList.remove("disable-scroll");
       window.removeEventListener("wheel", preventScroll);
     }
-
     return () => {
       window.removeEventListener("wheel", preventScroll);
     };
-  }, [visibility]);
+  });
 
   return (
     <>
@@ -35,7 +36,7 @@ const SearchBar = () => {
         <AiOutlineSearch color="white" size={25} className="mx-2" />
       </div>
       {visibility ? (
-        <div className=" w-full h-full bottom-0 left-0 ">
+        <div className="w-full h-full fixed">
           <span
             onClick={() => setVisibility(!visibility)}
             className="bg-white bottom-0 left-0 fixed opacity-50 cursor-pointer w-full h-full z-10"

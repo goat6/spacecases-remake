@@ -8,5 +8,13 @@
 
 /* Disable scroll for the whole page */
 .disable-scroll {
-  @apply overflow-hidden;
+
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000; /* Adjust the z-index according to your layout */
+
 }
