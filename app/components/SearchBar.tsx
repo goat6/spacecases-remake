@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
 
 const SearchBar = () => {
   const [visibility, setVisibility] = useState(false);
@@ -50,6 +50,9 @@ const SearchBar = () => {
                 placeholder="Search Users"
                 className="w-full h-full bg-gray-500 outline-none "
               />
+              <button onClick={() => setVisibility(!visibility)}>
+                <AiOutlineClose size={25} color="white" className="mr-2" />
+              </button>
             </span>
           </form>
         </>

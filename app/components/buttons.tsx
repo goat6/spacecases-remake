@@ -4,7 +4,7 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { AiOutlineLoading } from "react-icons/ai";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { BiLogIn } from "react-icons/bi";
 
 export function SignInButton() {
@@ -14,7 +14,11 @@ export function SignInButton() {
 
   if (status === "loading") {
     return (
-      <AiOutlineLoading className="animate-spin" color="white " size={50} />
+      <AiOutlineLoading3Quarters
+        className="animate-spin"
+        color="white "
+        size={50}
+      />
     );
   }
 
