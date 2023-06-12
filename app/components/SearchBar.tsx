@@ -35,14 +35,24 @@ const SearchBar = () => {
       >
         <AiOutlineSearch color="white" size={25} className="mx-2" />
       </div>
+
       {visibility ? (
-        <div className="w-full h-full fixed">
+        <>
           <span
             onClick={() => setVisibility(!visibility)}
-            className="bg-white bottom-0 left-0 fixed opacity-50 cursor-pointer w-full h-full z-10"
+            className="backdrop-blur-sm bg-transparent bottom-0 left-0 fixed cursor-pointer w-full h-full z-20"
           ></span>
-          <div className="w-1/2 h-1/2 bg-gray-700 fixed z-10 opacity-100 inset-x-0 inset-y-0 top-1/4 left-1/4 "></div>
-        </div>
+          <form className="w-1/2 h-1/2 bg-gray-700 fixed z-20 opacity-100 inset-x-0 inset-y-0 top-1/4 left-1/4 rounded-lg ">
+            <span className="w-full h-12 flex bg-gray-500 items-center ">
+              <AiOutlineSearch color="white" size={25} className="mx-2" />
+              <input
+                autoFocus
+                placeholder="Search Users"
+                className="w-full h-full bg-gray-500 outline-none "
+              />
+            </span>
+          </form>
+        </>
       ) : null}
     </>
   );
