@@ -17,7 +17,7 @@ export function SignInButton() {
       <AiOutlineLoading3Quarters
         className="animate-spin"
         color="white "
-        size={50}
+        size={35}
       />
     );
   }
