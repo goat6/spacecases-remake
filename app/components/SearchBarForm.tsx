@@ -9,8 +9,6 @@ interface Props {
 
 interface Users {
   id: string;
-  email: string;
-  name: string;
 }
 
 const SearchBarForm = ({ toggleVisibility }: Props) => {
@@ -26,6 +24,7 @@ const SearchBarForm = ({ toggleVisibility }: Props) => {
       body: JSON.stringify({ search }),
     });
 
+    console.log(search);
     const users = await response.json();
     setSearchResults(users);
   };
@@ -51,10 +50,10 @@ const SearchBarForm = ({ toggleVisibility }: Props) => {
         {searchResults.map((user) => (
           <Link
             onClick={toggleVisibility}
-            href={`/users/${user.id}`}
-            key={user.id}
+            href={`/users/${user.id.toString()}`}
+            key={user.id.toString()}
           >
-            {user.name}
+            {user.id.toString()}
           </Link>
         ))}
       </ul>

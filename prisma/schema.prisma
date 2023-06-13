@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -10,8 +7,74 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id    String  @id @default(auto()) @map("_id") @db.ObjectId
-  email String? @unique
-  name  String?
+// type TradeRequestsRecipientItems {
+//   float          Float
+//   name           String
+//   stickers       String[]
+//   stickers_count Int
+// }
+
+// type TradeRequestsSenderItems {
+//   float          Float
+//   name           String
+//   stickers       String[]
+//   stickers_count Int
+// }
+
+type UserDataInventory {
+  float          Float
+  name           String
+  stickers       String[]
+  stickers_count Int
+}
+
+type UserDataStats {
+  containers_opened Int
+  total_return      Int
+  total_spent       Int
+}
+
+// model guild_data {
+//   id                             String @id @map("_id")
+//   /// Could not determine type: the field only had null or empty values in the sample set.
+//   unbox_room_creation_channel_id Json?
+// }
+
+// model leaderboards {
+//   /// Multiple data types found: String: 7.7%, BigInt: 92.3% out of 13 sampled entries
+//   id   Json  @id @map("_id")
+//   data Json?
+// }
+
+// model patch_notes {
+//   id                       Int      @id @map("_id")
+//   Compatible_Release_Notes String[]
+//   Date                     String
+//   Patch_Notes              String
+//   Version                  Float
+//   title                    String
+// }
+
+// model trade_requests {
+//   id              String                        @id @map("_id")
+//   recipient_id    String
+//   recipient_items TradeRequestsRecipientItems[]
+//   /// Field referred in an index, but found no data to define the type.
+//   send_timestamp  Json?                         @map("send-timestamp")
+//   sender_items    TradeRequestsSenderItems[]
+
+//   @@index([send_timestamp], map: "send-timestamp_1")
+// }
+
+model user_data {
+  id                     String              @id @map("_id")
+  balance                Int
+  claim_streak           Int
+  inventory              UserDataInventory[]
+  inventory_max_capacity Int
+  inventory_size         Int
+  join_date              Int
+  lang                   String
+  last_claim             Int
+  stats                  UserDataStats
 }

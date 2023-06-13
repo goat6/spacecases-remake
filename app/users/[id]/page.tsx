@@ -8,11 +8,11 @@ interface Props {
 }
 
 export default async function UserProfile({ params }: Props) {
-  const user = await prisma.user.findUnique({ where: { id: params.id } });
+  const user = await prisma.user_data.findUnique({ where: { id: params.id } });
 
   return (
     <div>
-      <h1>This is {user?.name}'s profile</h1>
+      <h1>This is {user?.id}'s profile</h1>
     </div>
   );
 }
