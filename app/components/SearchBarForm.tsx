@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import { FieldValues, useForm } from "react-hook-form";
 import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
@@ -48,7 +49,13 @@ const SearchBarForm = ({ toggleVisibility }: Props) => {
       </span>
       <ul>
         {searchResults.map((user) => (
-          <li key={user.id}>{user.name}</li>
+          <Link
+            onClick={toggleVisibility}
+            href={`/users/${user.id}`}
+            key={user.id}
+          >
+            {user.name}
+          </Link>
         ))}
       </ul>
     </form>

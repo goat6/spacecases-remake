@@ -39,6 +39,7 @@ const SearchBar = () => {
         className="sm:w-full bg-gray-700 h-1/2 rounded-md flex items-center cursor-pointer"
       >
         <AiOutlineSearch color="white" size={25} className="mx-2" />
+        <p className="opacity-50">Search Users</p>
       </div>
 
       {visibility ? (
