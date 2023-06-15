@@ -31,7 +31,7 @@ const SearchBarForm = ({ toggleVisibility }: Props) => {
 
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      // onSubmit={handleSubmit(onSubmit)}
       className="w-1/2 h-1/2 bg-gray-700 fixed z-20 opacity-100 inset-x-0 inset-y-0 top-1/4 left-1/4 rounded-lg "
     >
       <span className="w-full h-12 flex bg-gray-500 items-center ">

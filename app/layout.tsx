@@ -8,6 +8,14 @@ export const metadata = {
   description: "The premier case unboxing simulator.",
 };
 
+import { Raleway } from "next/font/google";
+
+const raleway = Raleway({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-raleway",
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -15,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <AuthProvider>
-      <html className="h-full w-full" lang="en">
+      <html className={`${raleway.variable} h-full w-full`} lang="en">
         <body className="h-full w-full">
           <NavMenu />
           {children}

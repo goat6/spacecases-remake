@@ -8,28 +8,34 @@ import { SignInButton } from "./components/buttons";
 
 const NavMenu = () => {
   return (
-    <nav className="w-full h-[10svh] bg-gray-900 flex  items-center text-white  border-b-2 border-white">
-      <Link
-        href={"/"}
-        className="flex items-center justify-center  sm:mx-6 gap-2 flex-shrink-0"
-      >
-        <LuOrbit size={40} color="white" />
-        <h1 className="hidden sm:block  text-2xl">Space Cases</h1>
-      </Link>
-      <SearchBar />
-      <ul className="flex sm:gap-6 items-center justify-center sm:mx-6 flex-shrink-0">
-        <li className="flex items-center justify-center gap-1 text-gold">
-          <BiCrown size={35} color="gold"></BiCrown>
-          <Link className="hidden sm:block" href={"/premium"}>
+    <nav className="w-full h-[10svh] bg-palette-dark flex justify-between items-center text-white">
+      <span className="flex items-center justify-center gap-6 sm:ml-6">
+        <Link href={"/"} className="flex items-center justify-center gap-1 ">
+          <LuOrbit size={40} color="white" />
+          <h1 className="hidden sm:block  text-2xl">Space Cases</h1>
+        </Link>
+        <SearchBar />
+      </span>
+      <ul className="flex sm:gap-6 items-center justify-center sm:mr-6">
+        <li>
+          <Link
+            className="flex items-center justify-center gap-1 text-gold"
+            href={"/premium"}
+          >
+            <BiCrown size={30} color="gold"></BiCrown>
             Premium
+          </Link>
+        </li>
+        <li>
+          <Link href={"/leaderboard"}>
+            <p>Leaderboard</p>
           </Link>
         </li>
         <li>
           <Link
             href={"https://discord.gg/Ym33UvuKQW"}
-            className="flex justify-center items-center gap-2 bg-blue-700 rounded-md p-2"
+            className="flex justify-center items-center gap-1"
           >
-            <BsDiscord size={30} color="white" />
             <p className="hidden sm:block">Discord Server</p>
           </Link>
         </li>

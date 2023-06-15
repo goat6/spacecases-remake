@@ -17,7 +17,7 @@ export function SignInButton() {
       <AiOutlineLoading3Quarters
         className="animate-spin"
         color="white "
-        size={35}
+        size={30}
       />
     );
   }
@@ -53,7 +53,7 @@ export function SignInButton() {
 
   return (
     <button
-      className=" p-2 flex items-center justify-center gap-1 text-purple-400 text-2xl"
+      className=" flex items-center justify-center gap-1"
       onClick={() => signIn("discord")}
     >
       <BiLogIn size={30} />
