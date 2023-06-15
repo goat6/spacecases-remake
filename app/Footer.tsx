@@ -4,8 +4,8 @@ import { AiFillGithub } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <footer className="w-full h-24 bg-gray-900 flex justify-between items-center text-white font-bold">
-      <ul className="ml-6 flex justify-between items-center gap-4">
+    <footer className="w-full h-24 bg-palette-dark flex justify-between items-center text-palette-secondary">
+      <ul className="ml-6 flex justify-between items-center gap-6">
         <li>
           <Link href={"/contact"}>Contact Us</Link>
         </li>
@@ -14,10 +14,11 @@ const Footer = () => {
         </li>
       </ul>
       <Link
-        href={"https://github.com/goat6"}
+        href={"https://github.com/yonahadev"}
         className="flex justify-center items-center gap-1 mr-6"
       >
-        <AiFillGithub size={35} color="white" />© goat6
+        <AiFillGithub size={30} className="text-palette-secondary" />© yonahadev
+        2023
       </Link>
     </footer>
   );

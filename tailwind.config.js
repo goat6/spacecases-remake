@@ -10,9 +10,8 @@ module.exports = {
       colors: {
         palette: {
           dark: "#000000",
-          light: "#FFFFFF",
-          primary: "ED5E93",
-          secondary: "FFF6F9",
+          primary: "#ED5E93",
+          secondary: "#FFF6F9",
         }
       },
       fontFamily: {

@@ -36,9 +36,9 @@ const SearchBar = () => {
     <>
       <div
         onClick={toggleVisibility}
-        className="rounded-md flex items-center cursor-pointer gap-1"
+        className="rounded-md flex items-center cursor-pointer gap-1 text-palette-secondary"
       >
-        <AiOutlineSearch color="white" size={30} />
+        <AiOutlineSearch size={30} />
         <p className="opacity-50">Search Users</p>
       </div>
 

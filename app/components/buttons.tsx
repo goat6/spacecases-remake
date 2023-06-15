@@ -15,8 +15,7 @@ export function SignInButton() {
   if (status === "loading") {
     return (
       <AiOutlineLoading3Quarters
-        className="animate-spin"
-        color="white "
+        className="animate-spin text-palette-secondary"
         size={30}
       />
     );
@@ -38,7 +37,7 @@ export function SignInButton() {
           ></Image>
         </button>
         {dropdownVisibility ? (
-          <ul className="right-0 mt-2 top-full absolute w-max flex flex-col text-2xl h-max bg-white rounded-sm text-gray-800 text-left p-4 gap-2 z-0">
+          <ul className="right-0 mt-2 top-full absolute w-max flex flex-col text-2xl h-max bg-palette-secondary rounded-sm text-gray-800 text-left p-4 gap-2 z-0">
             <p>{session.user?.name}</p>
             <p className="text-gray-500 text-lg">{session.user?.email}</p>
             <Link href={"/profile/"}>Profile</Link>
