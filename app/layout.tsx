@@ -23,7 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <AuthProvider>
-      <html className={`${raleway.variable} h-full w-full`} lang="en">
+      <html
+        className={`${raleway.variable} h-full w-full scroll-smooth`}
+        lang="en"
+      >
         <body className="h-full w-full">
           <NavMenu />
           {children}

@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.text-gold {
-  color: gold;
-}
-
 /* Disable scroll for the whole page */
 .disable-scroll {
 
