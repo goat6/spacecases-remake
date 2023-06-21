@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ReactComponentElement } from "react";
 import { BsDiscord } from "react-icons/bs";
 
 export default function Home() {
@@ -34,7 +33,7 @@ export default function Home() {
             </button>
           </div>
         </span>
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden z-0">
           <div className="absolute inset-0 ">
             <Image
               src={"inventoryMockup.svg"}

@@ -1,7 +1,5 @@
-import NextAuth from "next-auth";
-import { NextAuthOptions } from "next-auth";
+import NextAuth, { NextAuthOptions } from "next-auth";
 import DiscordProvider from "next-auth/providers/discord";
-import { redirect } from "next/dist/server/api-utils";
 
 const authOptions:NextAuthOptions = {
   providers: [
@@ -13,4 +11,4 @@ const authOptions:NextAuthOptions = {
 };
 
 const handler = NextAuth(authOptions);
-export { handler as GET, handler as POST }
+export { handler as GET, handler as POST };
